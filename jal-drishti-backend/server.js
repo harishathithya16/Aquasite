@@ -22,6 +22,11 @@ app.use('/api/upload', uploadRoutes);
 app.use('/api/ai', aiRoutes); // Mounted here! This makes the endpoint accessible
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Jal-Drishti backend running on http://localhost:${PORT}`);
-});
+
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Jal-Drishti backend running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;

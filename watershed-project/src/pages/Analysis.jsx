@@ -57,7 +57,7 @@ export default function Analysis() {
 
     const fetchInterventions = async () => {
       try {
-        const response = await fetch('http://https://aquasite-6jer.vercel.app/api/interventions');
+        const response = await fetch('https://aquasite-6jer.vercel.app/api/interventions');
         if (response.ok) {
           const data = await response.json();
           setInterventions(data);

@@ -1,8 +1,6 @@
 -- Run this in pgAdmin or psql to setup the database
+USE jaldrishti;
 
-CREATE DATABASE jaldrishti;
-
--- Connect to the database and run:
 CREATE TABLE interventions (
     id SERIAL PRIMARY KEY,
     type VARCHAR(100) NOT NULL,
@@ -10,7 +8,7 @@ CREATE TABLE interventions (
     lat DECIMAL(10, 6) NOT NULL,
     lng DECIMAL(10, 6) NOT NULL,
     ndvi_change VARCHAR(10),
-    date_uploaded DATE DEFAULT CURRENT_DATE,
+    date_uploaded DATE DEFAULT (CURRENT_DATE),
     integrity_score INTEGER,
     image_url TEXT
 );

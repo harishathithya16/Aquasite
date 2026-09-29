@@ -18,7 +18,7 @@ export default function AiInsights() {
         const asset = JSON.parse(savedUpload);
         
         try {
-          const res = await fetch('http://localhost:5000/api/interventions');
+          const res = await fetch('http://https://aquasite-6jer.vercel.app/api/interventions');
           if (res.ok) {
             const data = await res.json();
             const dbMatch = data.find(item => item.id === asset.id);

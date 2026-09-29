@@ -24,7 +24,7 @@ export default function Dashboard() {
       let fetchedData = [];
       
       try {
-        const response = await fetch('http://localhost:5000/api/interventions');
+        const response = await fetch('http://https://aquasite-6jer.vercel.app/api/interventions');
         if (response.ok) {
           const data = await response.json();
           fetchedData = data.reverse(); // Reverse to show newest first
